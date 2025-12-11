@@ -1,0 +1,42 @@
+{
+  "name": "hyperzod/ship-rocket-sdk-php",
+  "description": "A PHP SDK to integrate ShipRocket with your application.",
+  "keywords": [
+    "hyperzod",
+    "ship-rocket-sdk-php"
+  ],
+  "homepage": "https://github.com/hyperzod/ship-rocket-sdk-php",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Mohammad Azeem",
+      "email": "azeemmohammad377@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "guzzlehttp/guzzle": "^7.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hyperzod\\ShipRocketSdkPhp\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Hyperzod\\ShipRocketSdkPhp\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
