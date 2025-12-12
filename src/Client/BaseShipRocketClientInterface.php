@@ -3,7 +3,7 @@
 namespace Hyperzod\ShiprocketSdkPhp\Client;
 
 /**
- * Interface for a ShipRocket client.
+ * Interface for a Shiprocket client.
  */
 interface BaseShiprocketClientInterface
 {

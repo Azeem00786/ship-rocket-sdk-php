@@ -1,10 +1,10 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Client;
+namespace Hyperzod\ShiprocketSdkPhp\Client;
 
 use Exception;
 use GuzzleHttp\Client;
-use Hyperzod\ShipRocketSdkPhp\Exception\InvalidArgumentException;
+use Hyperzod\ShiprocketSdkPhp\Exception\InvalidArgumentException;
 
 class BaseShiprocketClient implements ShiprocketClientInterface
 {
