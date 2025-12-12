@@ -1,9 +1,9 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Exception;
+namespace Hyperzod\ShiprocketSdkPhp\Exception;
 
 /**
- * Implements properties and methods common to all ShipRocket exceptions.
+ * Implements properties and methods common to all Shiprocket exceptions.
  */
 abstract class ApiErrorException extends \Exception implements ExceptionInterface
 {
@@ -40,7 +40,7 @@ abstract class ApiErrorException extends \Exception implements ExceptionInterfac
     }
 
     /**
-     * Gets the ShipRocket error object.
+     * Gets the Shiprocket error object.
      */
     public function getError()
     {
@@ -48,7 +48,7 @@ abstract class ApiErrorException extends \Exception implements ExceptionInterfac
     }
 
     /**
-     * Sets the ShipRocket error object.
+     * Sets the Shiprocket error object.
      */
     public function setError($error)
     {

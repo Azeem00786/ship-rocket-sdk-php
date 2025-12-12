@@ -1,10 +1,10 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Service;
+namespace Hyperzod\ShiprocketSdkPhp\Service;
 
 /**
  * Abstract base class for all service factories used to expose service
- * instances through {@link \Hyperzod\ShipRocketSdkPhp\Client\ShipRocketClient}.
+ * instances through {@link \Hyperzod\ShiprocketSdkPhp\Client\ShiprocketClient}.
  *
  * Service factories serve two purposes:
  *
@@ -14,14 +14,14 @@ namespace Hyperzod\ShipRocketSdkPhp\Service;
  */
 abstract class AbstractServiceFactory
 {
-    /** @var \Hyperzod\ShipRocketSdkPhp\Client\ShipRocketClientInterface */
+    /** @var \Hyperzod\ShiprocketSdkPhp\Client\ShiprocketClientInterface */
     private $client;
 
     /** @var array<string, AbstractService|AbstractServiceFactory> */
     private $services;
 
     /**
-     * @param \Hyperzod\ShipRocketSdkPhp\Client\ShipRocketClientInterface $client
+     * @param \Hyperzod\ShiprocketSdkPhp\Client\ShiprocketClientInterface $client
      */
     public function __construct($client)
     {

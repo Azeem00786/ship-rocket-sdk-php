@@ -1,11 +1,11 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Client;
+namespace Hyperzod\ShiprocketSdkPhp\Client;
 
 /**
  * Interface for a ShipRocket client.
  */
-interface BaseShipRocketClientInterface
+interface BaseShiprocketClientInterface
 {
    /**
     * Gets the API key used by the client to send requests.
@@ -28,9 +28,9 @@ interface BaseShipRocketClientInterface
    public function getClientAuthUrl();
 
    /**
-    * Gets the base URL for ShipRocket's API.
+    * Gets the base URL for Shiprocket's API.
     *
-    * @return string the base URL for ShipRocket's API
+    * @return string the base URL for Shiprocket's API
     */
    public function getApiBase();
 }

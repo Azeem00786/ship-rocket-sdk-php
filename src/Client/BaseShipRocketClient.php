@@ -6,20 +6,20 @@ use Exception;
 use GuzzleHttp\Client;
 use Hyperzod\ShipRocketSdkPhp\Exception\InvalidArgumentException;
 
-class BaseShipRocketClient implements ShipRocketClientInterface
+class BaseShiprocketClient implements ShiprocketClientInterface
 {
 
    /** @var array<string, mixed> */
    private $config;
    private $accessToken;
    /**
-    * Initializes a new instance of the {@link BaseShipRocketClient} class.
+    * Initializes a new instance of the {@link BaseShiprocketClient} class.
     *
     * The constructor takes two arguments.
     * @param string $email the email of the client
     * @param string $password the password of the client
-    * @param string $auth_url the base URL for ShipRocket's API
-    * @param string $api_base the base URL for ShipRocket's API
+    * @param string $auth_url the base URL for Shiprocket's API
+    * @param string $api_base the base URL for Shiprocket's API
     */
 
    public function __construct($email, $password, $auth_url, $api_base)
@@ -115,9 +115,9 @@ class BaseShipRocketClient implements ShipRocketClientInterface
    } 
 
    /**
-    * Gets the base URL for ShipRocket's API.
+    * Gets the base URL for Shiprocket's API.
     *
-    * @return string the base URL for ShipRocket's API
+    * @return string the base URL for Shiprocket's API
     */
    public function getApiBase()
    {
@@ -125,7 +125,7 @@ class BaseShipRocketClient implements ShipRocketClientInterface
    }
 
    /**
-    * Sends a request to ShipRocket's API.
+    * Sends a request to Shiprocket's API.
     *
     * @param string $method the HTTP method
     * @param string $path the path of the request
