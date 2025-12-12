@@ -1,14 +1,14 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Client;
+namespace Hyperzod\ShiprocketSdkPhp\Client;
 
 /**
- * Interface for a ShipRocket client.
+ * Interface for a Shiprocket client.
  */
-interface ShipRocketClientInterface extends BaseShipRocketClientInterface
+interface ShiprocketClientInterface extends BaseShiprocketClientInterface
 {
    /**   
-    * Sends a request to ShipRocket's API.
+    * Sends a request to Shiprocket's API.
     *
     * @param string $method the HTTP method
     * @param string $path the path of the request

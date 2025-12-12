@@ -1,6 +1,6 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Enums;
+namespace Hyperzod\ShiprocketSdkPhp\Enums;
 
 class HttpMethodEnum extends BaseEnum
 {

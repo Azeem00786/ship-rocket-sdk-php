@@ -1,7 +1,6 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Service;
-
+namespace Hyperzod\ShiprocketSdkPhp\Service;
 /**
  * Service factory class for API resources in the root namespace.
  * @property OrderService $orderService

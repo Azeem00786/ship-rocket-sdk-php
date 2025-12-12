@@ -1,5 +1,5 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Exception;
+namespace Hyperzod\ShiprocketSdkPhp\Exception;
 
 class ClientException extends ApiErrorException {}

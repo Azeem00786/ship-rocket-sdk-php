@@ -1,6 +1,6 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Exception;
+namespace Hyperzod\ShiprocketSdkPhp\Exception;
 
 class ServerException extends ApiErrorException
 {

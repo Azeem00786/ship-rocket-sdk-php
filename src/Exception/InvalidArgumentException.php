@@ -1,5 +1,5 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Exception;
+namespace Hyperzod\ShiprocketSdkPhp\Exception;
 
 class InvalidArgumentException extends \InvalidArgumentException implements ExceptionInterface {}

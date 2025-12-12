@@ -1,6 +1,6 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Service;
+namespace Hyperzod\ShiprocketSdkPhp\Service;
 
 /**
  * Abstract base class for all services.
@@ -8,14 +8,14 @@ namespace Hyperzod\ShipRocketSdkPhp\Service;
 abstract class AbstractService
 {
    /**
-    * @var \Hyperzod\ShipRocketSdkPhp\Client\ShipRocketClientInterface
+    * @var \Hyperzod\ShiprocketSdkPhp\Client\ShiprocketClientInterface
     */
    protected $client;
 
    /**
     * Initializes a new instance of the {@link AbstractService} class.
     *
-    * @param \Hyperzod\ShipRocketSdkPhp\Client\ShipRocketClientInterface $client
+    * @param \Hyperzod\ShiprocketSdkPhp\Client\ShiprocketClientInterface $client
     */
    public function __construct($client)
    {
@@ -25,7 +25,7 @@ abstract class AbstractService
    /**
     * Gets the client used by this service to send requests.
     *
-    * @return \Hyperzod\ShipRocketSdkPhp\Client\ShipRocketClientInterface
+    * @return \Hyperzod\ShiprocketSdkPhp\Client\ShiprocketClientInterface
     */
    public function getClient()
    {

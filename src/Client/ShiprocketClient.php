@@ -1,10 +1,10 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Client;
+namespace Hyperzod\ShiprocketSdkPhp\Client;
 
-use Hyperzod\ShipRocketSdkPhp\Service\CoreServiceFactory;
+use Hyperzod\ShiprocketSdkPhp\Service\CoreServiceFactory;
 
-class ShipRocketClient extends BaseShipRocketClient
+class ShiprocketClient extends BaseShiprocketClient
 {
     /**
      * @var CoreServiceFactory

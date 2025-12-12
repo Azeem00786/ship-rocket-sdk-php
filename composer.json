@@ -1,11 +1,11 @@
 {
-  "name": "hyperzod/ship-rocket-sdk-php",
-  "description": "A PHP SDK to integrate ShipRocket with your application.",
+  "name": "hyperzod/shiprocket-sdk-php",
+  "description": "A PHP SDK to integrate Shiprocket with your application.",
   "keywords": [
     "hyperzod",
-    "ship-rocket-sdk-php"
+    "shiprocket-sdk-php"
   ],
-  "homepage": "https://github.com/hyperzod/ship-rocket-sdk-php",
+  "homepage": "https://github.com/hyperzod/shiprocket-sdk-php",
   "license": "MIT",
   "type": "library",
   "authors": [
@@ -24,12 +24,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Hyperzod\\ShipRocketSdkPhp\\": "src"
+      "Hyperzod\\ShiprocketSdkPhp\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Hyperzod\\ShipRocketSdkPhp\\Tests\\": "tests"
+      "Hyperzod\\ShiprocketSdkPhp\\Tests\\": "tests"
     }
   },
   "scripts": {

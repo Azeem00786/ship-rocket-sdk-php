@@ -1,13 +1,13 @@
-# PHP SDK for ShipRocket
+# PHP SDK for Shiprocket
 
-This is the official PHP SDK for ShipRocket.
+This is the official PHP SDK for Shiprocket.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require hyperzod/ship-rocket-sdk-php
+composer require hyperzod/shiprocket-sdk-php
 ```
 
 ### Changelog

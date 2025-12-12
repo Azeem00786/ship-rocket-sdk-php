@@ -1,21 +1,21 @@
 <?php
 
-namespace Hyperzod\ShipRocketSdkPhp\Service;
+namespace Hyperzod\ShiprocketSdkPhp\Service;
 
-use Hyperzod\ShipRocketSdkPhp\Enums\HttpMethodEnum;
+use Hyperzod\ShiprocketSdkPhp\Enums\HttpMethodEnum;
 
 class OrderService extends AbstractService
 {
    /**
-    * Create a job on ShipRocket
+    * Create a job on Shiprocket
     *
     * @param array $params
     *
-    * @throws \Hyperzod\ShipRocketSdkPhp\Exception\ApiErrorException if the request fails
+    * @throws \Hyperzod\ShiprocketSdkPhp\Exception\ApiErrorException if the request fails
     *
     */
    public function create(array $params)
    {
-      return $this->request(HttpMethodEnum::POST, 'v3/orders', $params);
+      return $this->request(HttpMethodEnum::POST, 'external/orders/create/adhoc', $params);
    }
 }
