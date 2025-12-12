@@ -16,6 +16,6 @@ class OrderService extends AbstractService
     */
    public function create(array $params)
    {
-      return $this->request(HttpMethodEnum::POST, 'v3/orders', $params);
+      return $this->request(HttpMethodEnum::POST, 'external/orders/create/adhoc', $params);
    }
 }

@@ -11,34 +11,108 @@ class BaseShipRocketClient implements ShipRocketClientInterface
 
    /** @var array<string, mixed> */
    private $config;
-
+   private $accessToken;
    /**
     * Initializes a new instance of the {@link BaseShipRocketClient} class.
     *
     * The constructor takes two arguments.
-    * @param string $api_key the API key of the client
+    * @param string $email the email of the client
+    * @param string $password the password of the client
+    * @param string $auth_url the base URL for ShipRocket's API
     * @param string $api_base the base URL for ShipRocket's API
     */
 
-   public function __construct($api_key, $api_base)
+   public function __construct($email, $password, $auth_url, $api_base)
    {
       $config = $this->validateConfig(array(
-         "api_key" => $api_key,
-         "api_base" => $api_base
+         "email" => $email,
+         "password" => $password,
+         "auth_url" => $auth_url,
+         "api_base" => $api_base,
       ));
 
       $this->config = $config;
    }
 
    /**
-    * Gets the API key used by the client to send requests.
+    * Gets the email used by the client to send requests.
     *
-    * @return null|string the API key used by the client to send requests
+    * @return null|string the email used by the client to send requests
     */
-   public function getApiKey()
+   public function getClientEmail()
    {
-      return $this->config['api_key'];
+      return $this->config['email'];
    }
+   /**
+    * Gets the password used by the client to send requests.
+    *
+    * @return null|string the password used by the client to send requests
+    */
+   public function getClientPassword()
+   {
+      return $this->config['password'];
+   }
+
+   /**
+    * Gets the auth_url used by the client to send requests.
+    *
+    * @return null|string the auth_url used by the client to send requests
+    */
+   public function getClientAuthUrl()
+   {
+      return $this->config['auth_url'];
+   }
+
+   /**
+    * Gets the api_base used by the client to send requests.
+    *
+    * @return null|string the api_base used by the client to send requests
+    */
+   public function getClientApiBase()
+   {
+      return $this->config['api_base'];
+   }
+
+   /**
+    * Sets the access token used by the client to send requests.
+    *
+    * @param string $token the access token used by the client to send requests
+    */
+   public function setAccessToken($token)
+   {
+      $this->accessToken = $token;
+   }
+
+   /**
+    * Gets the access token used by the client to send requests.
+    *
+    * @return null|string the access token used by the client to send requests
+    */
+   public function getAccessToken()
+      {
+      if ($this->accessToken) {
+         return $this->accessToken;
+      }
+
+      // Instantiate a Guzzle client
+      $client = new Client();
+
+      $response = $client->post($this->getClientAuthUrl(), [
+         'form_params' => [
+            'client_email' => $this->getClientEmail(),
+            'client_password' => $this->getClientPassword(),
+         ]
+      ]);
+
+      // Get the response body as a string
+      $responseBody = $response->getBody()->getContents();
+
+      // Decode the JSON response
+      $result = json_decode($responseBody, true);
+
+      $this->accessToken = $result['access_token'];
+      return $this->accessToken;
+   } 
 
    /**
     * Gets the base URL for ShipRocket's API.
@@ -63,7 +137,7 @@ class BaseShipRocketClient implements ShipRocketClientInterface
       $client = new Client([
          'headers' => [
             'content-type' => 'application/json',
-            'Authorization' => 'Bearer ' . $this->getApiKey()
+            'Authorization' => 'Bearer ' . $this->getAccessToken()
          ]
       ]);
 
